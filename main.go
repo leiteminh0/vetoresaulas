@@ -4,11 +4,11 @@ import "fmt"
 
 func main() {
 
-	nums := []int{1, 2, 3, 4, 5}
+	nomes := []string{"Ana", "Bruno", "Carlos", "Daniela", "Eduardo"}
 
-	nums = append(nums, 6, 7, 8)
+	fmt.Println("Os dois primeiros:", nomes[:2])
 
-	fmt.Println("Slice:", nums)
-	fmt.Println("Tamanho:", len(nums))
-	fmt.Println("Capacidade:", cap(nums))
+	fmt.Println("Os dois últimos:", nomes[len(nomes)-2:])
+
+	fmt.Println("Nome do meio:", nomes[2:3])
 }
