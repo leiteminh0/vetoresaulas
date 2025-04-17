@@ -1,34 +1,17 @@
 package main
 
 import (
-"fmt"
+	"fmt"
 )
 
-func dividir (dividendo int, divisor int) (int, string){
-	if dividir == 0 {
-		return 0, "Erro na divisão por zero"
-}
-return dividendo / divisor, "Sem erro"
+func dadosPessoa(nome string, idade int) (int, string) {
+	if idade >= 18 {
+		return idade, "maior de idade"
+	}
+	return idade, "menor de idade"
 }
 
 func main() {
-resultado, erro := dividir(10,2)
-
-if erro != "Sem erro" {
-	fmt.Printf(erro)
-} else {
-	fmt.Println("O resultado da divisão é:", resultado, erro)
+	idade, status := dadosPessoa("Bangchan", 27)
+	fmt.Printf("Idade: %d - Situação: %s\n", idade, status)
 }
-
-func operaçãoBasica(a int, b int) (int, int, int) {
-	soma := a + b
-	multiplicacao := a * b
-	subtracao := a - b 
-	return soma, multiplicacao, subtracao
-}
-soma, subtracao, multiplicacao := operaçãoBasica(10, 5)
-fmt.Println("Essa é sua soma:", soma)
-fmt.Println("Essa é  sua multiplicacao:", multiplicacao)
-fmt.Println("Essa é sua subtracao", subtracao)
-}
-	
